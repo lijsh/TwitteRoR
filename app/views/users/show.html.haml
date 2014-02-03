@@ -5,9 +5,12 @@
       %h1
         = gravatar_for @user
         = @user.name
+    %section
+      = render 'shared/stats'
   .span8
+    = render 'follow_form' if signed_in?
     - if @user.microposts.any?
-      %h1
+      %h3
         Microposts (
         = @user.microposts.count
         )
