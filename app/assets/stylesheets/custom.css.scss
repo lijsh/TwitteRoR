@@ -48,7 +48,7 @@ h1 {
   text-align: center;
 }
 
-h2 {
+.sub-tip {
   font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
@@ -242,4 +242,25 @@ aside {
     height: 100px;
     margin-bottom: 5px;
   }
+}
+
+/* posts */
+.posts {
+  font-size: 1.1em;
+  textarea {
+    height: 300px;
+  }
+  article {
+    margin: 20px 0;
+    font-size: 1.1em;
+  }
+}
+
+.posts_list {
+  list-style: none;
+  li {
+    padding: 12px 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+  
 }

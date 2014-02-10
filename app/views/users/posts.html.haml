@@ -1,0 +1,8 @@
+- provide(:title, @title)
+
+.row
+  .span8
+    %ol.posts_list
+      = render @posts
+
+    = will_paginate @posts

@@ -1,0 +1,6 @@
+%li
+  %h3= link_to post.title, post
+  %span.timestamp
+    Post
+    = time_ago_in_words(post.created_at)
+    ago.

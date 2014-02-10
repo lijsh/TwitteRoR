@@ -1,5 +1,8 @@
 - if signed_in?
   .row
+    .span8
+      %h3 Microposts Feed
+      = render 'shared/feed'
     %aside.span4
       %section
         = render 'shared/user_info'
@@ -7,13 +10,10 @@
         = render 'shared/stats'
       %section
         = render 'shared/micropost_form'
-    .span8
-      %h3 Microposts Feed
-      = render 'shared/feed'
 - else
   .center.hero-unit
     %h1 Welcome to the Sample App
-    %h2 
+    %h2.sub-tip 
       This is the home page for the
       %a{:href => "http://railstutorial.org/"} Ruby on Rails Tutorial
       sample application.

@@ -1,9 +1,11 @@
 Weibo::Application.routes.draw do
   resources :users do
     member do
-      get :following, :followers
+      get :following, :followers, :posts
     end
   end
+
+  resources :posts
   resources :sessions, only: [:create, :new, :destroy]
   resources :microposts, only: [:create, :destroy]
   resources :relationships, only: [:create, :destroy]

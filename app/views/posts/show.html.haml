@@ -1,0 +1,19 @@
+.row
+  .span8
+    .posts
+      %h2= @post.title
+
+      
+
+      %span.timestamp
+        Post
+        = time_ago_in_words(@post.created_at)
+        ago.
+      - if current_user?(@post.user)
+        %span.pull-right
+          = link_to "edit", edit_post_path(@post)
+          |
+          = link_to "delete", @post, method: :delete,
+            data: { confirm: "You sure?" }
+
+      %article= sanitize(@post.text)
