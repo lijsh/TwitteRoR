@@ -3,20 +3,19 @@
     .span8
       %h3 Microposts Feed
       = render 'shared/feed'
-    %aside.span4
-      %section
+    %aside.span4.sidebar
+      %section.sidebar__section
         = render 'shared/user_info'
-      %section
+      %section.sidebar__section
         = render 'shared/stats'
-      %section
+      %section.sidebar__section
         = render 'shared/micropost_form'
 - else
   .center.hero-unit
-    %h1 Welcome to the Sample App
-    %h2.sub-tip 
-      This is the home page for the
+    %h1.center__title Welcome to the RailsBo
+    %h2.center__sub-title
+      This is a weibo site inspired by the
       %a{:href => "http://railstutorial.org/"} Ruby on Rails Tutorial
-      sample application.
     = link_to "Sign up now!", signup_path, class: 'btn btn-large btn-primary'
   = link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/'
 
